@@ -1,6 +1,8 @@
 package com.bite.springaopdemo.controller;
 
+import com.bite.springaopdemo.aspect.MyAspect;
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +16,7 @@ public class TestController {
 //        int a = 10 / 0;
         return 1;
     }
+    @MyAspect
     @RequestMapping("/t2")
     public Boolean t2() {
         log.info("执行t2");

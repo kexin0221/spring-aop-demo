@@ -8,10 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Aspect
-@Component
+//@Component
 public class AspectDemo1 {
     @Pointcut("execution(* com.bite.springaopdemo.controller.*.*(..))")
     public void pt(){};
+
     @Around("pt()")
     public Object timeRecord(ProceedingJoinPoint pjp) {
         log.info("目标方法执行前...");

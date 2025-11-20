@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Aspect
-@Component
+//@Component
 public class AspectDemo2 {
 
     @Before("com.bite.springaopdemo.aspect.AspectDemo1.pt()")
